@@ -4,6 +4,13 @@
 				<a href="/" id="logo"> </a>
 				<div id="header-content">
 					<nav id="main-nav">
+						<security:authorize access="isAuthenticated()">
+							<h5>
+								<fmt:message key="menu.bemVindo"/>
+								<security:authentication property="principal" var="usuario"/>
+								<a href="#">${usuario.username }</a>
+							</h5>
+						</security:authorize>
 						<ul class="clearfix">
 							<li><a href="${s:mvcUrl('HC#index').build()}" rel="nofollow">
 								<fmt:message key="menu.inicio"/>
