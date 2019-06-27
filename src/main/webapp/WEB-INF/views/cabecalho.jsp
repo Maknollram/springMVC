@@ -17,10 +17,11 @@
 							</a></li> 
 						</ul>
 						<ul class="clearfix">
-							<security:authorize access="isAuthenticated()">
+							
 								<li><a href="${s:mvcUrl('PC#listar').build()}" rel="nofollow">
 									<fmt:message key="menu.lista"/>
 								</a></li>
+							<security:authorize access="isAuthenticated()">
 								<li><a href="${s:mvcUrl('PC#form').build()}" rel="nofollow">
 									<fmt:message key="menu.criar"/>
 								</a></li>
