@@ -1,24 +1,14 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 
 			<div class="clearfix container">
 				<a href="/" id="logo"> </a>
 				<div id="header-content">
 					<nav id="main-nav">
-<!-- 						<ul> -->
-<!-- 							<li><fmt:message key="menu.bemVindo"/> <a href="#"> -->
-<%-- 								<security:authentication property="principal" var="usuario"/> --%>
-<%-- 								${usuario.username } --%>
-<!-- 							</a></li> -->
-<!-- 						</ul> -->
 						<ul class="clearfix">
 							<li><a href="${s:mvcUrl('HC#index').build()}" rel="nofollow">
 								<fmt:message key="menu.inicio"/>
 							</a></li>
-<%-- 							<li><a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow">Carrinho ()</a></li> --%>
-							<li><a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow">
-<!-- 								<fmt:message key="menu.carrinho"> -->
-<%-- 									<fmt:param value="${carrinhoCompras.quantidade}"/> --%>
-<!-- 								</fmt:message> -->
 								<s:message code="menu.carrinho" arguments="${carrinhoCompras.quantidade}"/>
 							</a></li> 
 						</ul>

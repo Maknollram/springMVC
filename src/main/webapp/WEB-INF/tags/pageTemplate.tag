@@ -8,6 +8,8 @@
 <%@ attribute name="bodyClass" required="false"%>
 <%@ attribute name="extraScripts" fragment="true"%>
 
+<c:url value="/resources/css" var="contextPath" />
+
 <!DOCTYPE html>
 <html>
 	<head id="layout-header">
@@ -17,7 +19,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		
-		<c:url value="/resources/css" var="contextPath" />
 		<link rel="icon" href="//cdn.shopify.com/s/files/1/0155/7645/t/177/assets/favicon.ico?11981592617154272979" type="image/ico" />
 		<link href="https://plus.googlecom/108540024862647200608" rel="publisher" />
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' />
@@ -42,9 +43,9 @@
 		
 		<jsp:doBody />
 		
-		<%@ include file="/WEB-INF/views/rodape.jsp" %>
+		<jsp:invoke fragment="extraScripts"></jsp:invoke>
 		
-		<jsp:invoke fragment="extraScripts"/>
+		<%@ include file="/WEB-INF/views/rodape.jsp" %>
 	
 	</body>
 	
