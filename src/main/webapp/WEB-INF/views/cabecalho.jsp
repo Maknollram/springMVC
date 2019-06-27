@@ -4,12 +4,12 @@
 				<a href="/" id="logo"> </a>
 				<div id="header-content">
 					<nav id="main-nav">
-						<ul>
-							<li><fmt:message key="menu.bemVindo"/> <a href="#">
-								<security:authentication property="principal" var="usuario"/>
-								${usuario.username }
-							</a></li>
-						</ul>
+<!-- 						<ul> -->
+<!-- 							<li><fmt:message key="menu.bemVindo"/> <a href="#"> -->
+<%-- 								<security:authentication property="principal" var="usuario"/> --%>
+<%-- 								${usuario.username } --%>
+<!-- 							</a></li> -->
+<!-- 						</ul> -->
 						<ul class="clearfix">
 							<li><a href="${s:mvcUrl('HC#index').build()}" rel="nofollow">
 								<fmt:message key="menu.inicio"/>
