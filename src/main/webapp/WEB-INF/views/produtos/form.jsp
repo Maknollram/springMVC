@@ -50,10 +50,10 @@
 					<form:hidden path="precos[${status.index}].tipo" value="${tipoPreco}"/>
 				</div>
 			</c:forEach>
-			<div>
-				<label>Sumário</label>
-				<input name="sumario" type="file"/>
-			</div>
+<!-- 			<div> -->
+<!-- 				<label>Sumário</label> -->
+<!-- 				<input name="sumario" type="file"/> -->
+<!-- 			</div> -->
 			<button type="submit">Cadastrar</button>
 		</form:form>
 	</body>
